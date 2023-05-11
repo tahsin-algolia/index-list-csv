@@ -21,7 +21,13 @@ const objectsToCSV = (arr) => {
 let indices = [];
 client.listIndices().then(({ items }) => {
   indices = items
-    .map(({ name, entries, dataSize }) => ({ name, entries, dataSize }));
+    .map(({ name, entries, dataSize }) => (
+      {
+        'Index Name': name,
+        'Number of Entries': entries,
+        'Total Data Size': dataSize
+      }
+    ));
   indicesCsv = objectsToCSV(indices);
   fs.writeFile(process.env.CSV_FILE_NAME, indicesCsv, err => {
     if (err) {
