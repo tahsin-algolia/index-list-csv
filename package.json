@@ -1,0 +1,18 @@
+{
+  "name": "index-scripts",
+  "version": "1.0.0",
+  "description": "Node.js script to list indexes from Algolia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tahsin Mostafiz",
+  "license": "ISC",
+  "dependencies": {
+    "algoliasearch": "^4.17.0",
+    "dotenv": "^16.0.3"
+  },
+  "engines": {
+    "node": ">=19.0.0"
+  }
+}
